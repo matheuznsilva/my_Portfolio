@@ -5,7 +5,9 @@ This repository has my portfolio
 ## Requisitos
 
 <div>
-  
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="html">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white" alt="css">
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&amp;logo=javascript&amp;logoColor=F7DF1E" alt="javascript">
   <img src="https://img.shields.io/badge/Node-323330?style=for-the-badge&amp;logo=Node.js&amp;logoColor=339933" alt="node.js">
 </div>
 
