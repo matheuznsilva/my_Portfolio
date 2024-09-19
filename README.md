@@ -38,10 +38,6 @@ The project is in its early stages and requires several adjustments and improvem
 
 **Current Achievements:**
 - Home page.
-- Backend and Frontend integrated.
-- Organized and functional directory structure.
-- Basic CRUD (Create, Read, Update, Delete) working.
-- User interface (UI) is operational.
 
 **Next Steps:**
 - Adjust layout and styling details.
