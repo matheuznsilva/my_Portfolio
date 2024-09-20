@@ -23,3 +23,20 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+function SendMail(){
+    var params = {
+        form_name : document.getElementById("fullName").value,
+        email_id : document.getElementById("email").value,
+        phone_id : document.getElementById("phone").value,
+        subject_id : document.getElementById("subject").value,
+        message_id : document.getElementById("message").value
+    }
+    emailjs.send("Your_ServiceID", "TemplateID", params)
+    .then(function(response){
+        alert("Success! " + response.status);
+    })
+    .catch(function(error){
+        alert("Failed to send email. Error: " +error);
+    });
+}

@@ -479,7 +479,7 @@ span{
     justify-content: center;
     flex-wrap: wrap;
 }
-.content form .input-box input,
+.content form .input-box, input,
 .contact form textarea{
     width: 100%;
     padding: 2.5rem;
@@ -649,4 +649,19 @@ span{
     .services-container{
         grid-template-columns: repeat(1,1fr);
     }
+}
+
+.btn-toggle {
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-toggle:hover {
+    background-color: darken(var(--main-color), 10%);
 }

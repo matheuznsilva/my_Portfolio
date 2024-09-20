@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,17 +22,18 @@
                 <a href="#projects">Projects</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
-               
-            </nav>
+                <!--<a href="/html/Portuguese/index_pt.html" class="navbar-btn">Mudar para Português</a>-->
+                </nav>
         </header>
 
         <section class="home" id="home">
             <div class="home-content">
                 <h1>Hi, It's <span>Matheus</span></h1>
                 <h3 class="text-animation">I'm a <span></span></h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius, at delectus omnis provident eum magnam architecto rem vero unde consectetur earum quod corporis recusandae, iste obcaecati voluptatibus dolor commodi!
-                </p>
+                <p> A technology enthusiast, Computer Science student at 
+                    the Federal University of São João del-Rei (UFSJ), 
+                    fascinated by Cybersecurity and intrigued by the possibilities 
+                    that AI can provide</p>
 
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/matheuznsilva/"><i class='bx bxl-linkedin' ></i></a>
@@ -41,7 +42,8 @@
                 </div>
 
                 <div class="btn-group">
-                    <a href="#" class="btn">Hire</a>
+                    <a href="https://drive.google.com/file/d/133qDxFoI7s9276zvhsQbXKDPubj2y9K6/view?usp=drive_link" class="btn" target="_blank"><i class='bx bxs-download'></i> Download CV</a>
+                    <!--<a href="https://drive.usercontent.google.com/download?id=133qDxFoI7s9276zvhsQbXKDPubj2y9K6&export=download&authuser=0&confirm=t&uuid=9f8d2446-d784-4a6c-a3e6-3ed765224ad0&at=AO7h07e-2VwaTbm8Mo1MrRGVZCk4:1726801599702" class="btn"><i class='bx bxs-download'></i> Curriculum</a>-->
                     <a href="#contact" class="btn">Contact</a>
                 </div>
             </div>
@@ -59,12 +61,11 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2024</div>
                     <div class="timeline-content">
-                        <h3>Hackers do Bem</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur 
-                            adipisicing elit. Perferendis magni dignissimos 
-                            quaerat pariatur molestiae sint distinctio rem 
-                            at optio, vel ad temporibus ea eveniet libero. 
-                            Perspiciatis sapiente quia rerum sit.</p>
+                        <h3>Hackers do Bem - RNP</h3>
+                        <p>Hackers do Bem aims to develop human resources 
+                            in cybersecurity. The program has five mapped 
+                            tracks: leveling, basic, fundamental, specialized 
+                            and technological residency courses.</p>
                     </div>
                 </div>
 
@@ -72,12 +73,14 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2016</div>
                     <div class="timeline-content">
-                        <h3>College</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur 
-                            adipisicing elit. Perferendis magni dignissimos 
-                            quaerat pariatur molestiae sint distinctio rem 
-                            at optio, vel ad temporibus ea eveniet libero. 
-                            Perspiciatis sapiente quia rerum sit.</p>
+                        <h3>Computer Science - UFSJ</h3>
+                        <p>The Bachelor's Degree in Computer Science aims to train 
+                            professionals with scientific, technical, ethical and 
+                            humanistic foundations, consistent with the specificity 
+                            of the area of ​​Computer Science and in accordance with 
+                            the guidelines developed by the Commission of Experts 
+                            in Education in Computing and Information Technology 
+                            (CEEInf) of the MEC.</p>
                     </div>
                 </div>
 
@@ -85,27 +88,18 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2014</div>
                     <div class="timeline-content">
-                        <h3>Tecnico em Informatica</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur 
-                            adipisicing elit. Perferendis magni dignissimos 
-                            quaerat pariatur molestiae sint distinctio rem 
-                            at optio, vel ad temporibus ea eveniet libero. 
-                            Perspiciatis sapiente quia rerum sit.</p>
+                        <h3>Industrial Learning in IT - SENAI/MG</h3>
+                        <p>The course aims to train participants to install and 
+                            maintain physical IT infrastructure. This includes 
+                            implementing operating systems, managing clients and 
+                            active network devices. In addition, the course guides 
+                            students to rigorously apply technical and quality 
+                            standards. In this way, participants will be prepared to 
+                            deal safely and efficiently with the challenges of IT 
+                            infrastructure.</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2012</div>
-                    <div class="timeline-content">
-                        <h3>Tecnico em Edificações</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur 
-                            adipisicing elit. Perferendis magni dignissimos 
-                            quaerat pariatur molestiae sint distinctio rem 
-                            at optio, vel ad temporibus ea eveniet libero. 
-                            Perspiciatis sapiente quia rerum sit.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -212,20 +206,20 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form action="">
+            <form action="#">
                 <div class="input-group">
                     <div class="input-box">
-                        <input type="text" placeholder="Full Name">
-                        <input type="email" placeholder="Email">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
                     </div>
                     <div class="input-box">
-                        <input type="number" placeholder="Phone Number">
-                        <input type="text" placeholder="Subject">
+                        <input type="number" id="phone" placeholder="Phone Number">
+                        <input type="text" id="subject" placeholder="Subject">
                     </div>
                 </div>
                 
                 <div class="input-group-2">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
                     <input type="submit" value="Send Message" class="btn">
                 </div>
             </form>
@@ -244,19 +238,19 @@
                 </li>
 
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#projects">Projects</a>
                 </li>
 
                 <li>
-                    <a href="#">About Me</a>
+                    <a href="#home">About Me</a>
                 </li>
 
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
 
                 <li>
-                    <a href="#">Testimonials</a>
+                    <a href="#testimonials">Testimonials</a>
                 </li>
             </ul>
             <p class="copyright">
