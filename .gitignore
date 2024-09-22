@@ -1,8 +1,5 @@
 # Ignorar arquivos de ambiente
-.env
-
-# Ignorar arquivos HTML
-*.html
+*.env
 
 # Ignorar arquivos CSS
 *.css
