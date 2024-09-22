@@ -24,7 +24,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-function SendMail(){
+/*function SendMail(){
     var params = {
         form_name : document.getElementById("fullName").value,
         email_id : document.getElementById("email").value,
@@ -39,4 +39,4 @@ function SendMail(){
     .catch(function(error){
         alert("Failed to send email. Error: " +error);
     });
-}
+}*/

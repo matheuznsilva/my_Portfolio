@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -479,8 +482,7 @@ span{
     justify-content: center;
     flex-wrap: wrap;
 }
-.content form .input-box, input,
-.contact form textarea{
+.content form .input-box, input{
     width: 100%;
     padding: 2.5rem;
     font-size: 1.8rem;
@@ -491,8 +493,19 @@ span{
     margin: 1.5rem 0;
     resize: none;
 }
+.contact form textarea{
+    width: 100%;
+    padding: 5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
 .contact form .btn{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .footer{
@@ -557,7 +570,7 @@ span{
     html{
         font-size: 55%;
     }
-    .services-container{
+    .projects-container{
         padding-bottom: 7rem;
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
@@ -585,7 +598,7 @@ span{
     .timeline-dot{
         left: 0;
     }
-    .services{
+    .projects{
         padding-bottom: 7rem;
     }
     .testimonials .wrapper{
@@ -643,10 +656,10 @@ span{
     .home-img img{
         width: 56vw;
     }
-    .services h2{
+    .projects h2{
         margin-bottom: 3rem;
     }
-    .services-container{
+    .projects-container{
         grid-template-columns: repeat(1,1fr);
     }
 }

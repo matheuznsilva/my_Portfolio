@@ -1,0 +1,14 @@
+.lang-btn {
+    margin-top: 0;
+}
+
+.select-lang {
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;  /* Tamanho da bandeira */
+    height: 32px;
+    background-image: url(https://flagsapi.com/BR/shiny/32.png); /* URL da bandeira */
+    background-size: cover; /* Garante que a bandeira se ajuste corretamente */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    border: none; /* Remove borda */
+}

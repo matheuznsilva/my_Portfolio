@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <title>Matheus N Silva</title>
 
         <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/pt_button.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
@@ -22,8 +22,12 @@
                 <a href="#projects">Projects</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
-                <!--<a href="/html/Portuguese/index_pt.html" class="navbar-btn">Mudar para Português</a>-->
-                </nav>
+            </nav>
+
+            <div class="lang-btn">
+                <a href="/html/pt_BR/index pt.html" class="select-lang"></a>
+            </div>
+
         </header>
 
         <section class="home" id="home">
@@ -59,19 +63,7 @@
             <div class="timeline-items">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>Hackers do Bem - RNP</h3>
-                        <p>Hackers do Bem aims to develop human resources 
-                            in cybersecurity. The program has five mapped 
-                            tracks: leveling, basic, fundamental, specialized 
-                            and technological residency courses.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2016</div>
+                    <div class="timeline-date">2026</div>
                     <div class="timeline-content">
                         <h3>Computer Science - UFSJ</h3>
                         <p>The Bachelor's Degree in Computer Science aims to train 
@@ -81,6 +73,18 @@
                             the guidelines developed by the Commission of Experts 
                             in Education in Computing and Information Technology 
                             (CEEInf) of the MEC.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Hackers do Bem - RNP</h3>
+                        <p>Hackers do Bem aims to develop human resources 
+                            in cybersecurity. The program has five mapped 
+                            tracks: leveling, basic, fundamental, specialized 
+                            and technological residency courses.</p>
                     </div>
                 </div>
 
@@ -100,6 +104,21 @@
                     </div>
                 </div>
 
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2012</div>
+                    <div class="timeline-content">
+                        <h3>Building Technican - SENET/MG</h3>
+                        <p>The course aims to train participants to install and 
+                            maintain physical IT infrastructure. This includes 
+                            implementing operating systems, managing clients and 
+                            active network devices. In addition, the course guides 
+                            students to rigorously apply technical and quality 
+                            standards. In this way, participants will be prepared to 
+                            deal safely and efficiently with the challenges of IT 
+                            infrastructure.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -206,20 +225,20 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form action="#">
+            <form action="/send-email" method="post">
                 <div class="input-group">
                     <div class="input-box">
-                        <input type="text" id="fullName" placeholder="Full Name" required>
-                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="text" name="fullName" id="fullName" placeholder="Full Name" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                     </div>
                     <div class="input-box">
-                        <input type="number" id="phone" placeholder="Phone Number">
-                        <input type="text" id="subject" placeholder="Subject">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+                        <input type="text" name="subject" id="subject" placeholder="Subject">
                     </div>
                 </div>
                 
                 <div class="input-group-2">
-                    <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
                     <input type="submit" value="Send Message" class="btn">
                 </div>
             </form>
@@ -259,6 +278,7 @@
         </footer>
 
         <script src="/javaScript/script.js"></script>
+        <script src="/javaScript/send_email.js"></script>
     </body>
 
 </html>
