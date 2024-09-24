@@ -403,7 +403,7 @@ span{
 }
 
 .testimonials{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 .testimonials-box{
     background-size: cover;
@@ -463,7 +463,7 @@ span{
 }
 
 .contact{
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 .contact h2{
     margin-bottom: 3rem;
@@ -513,7 +513,7 @@ span{
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 .footer .social{
     text-align: center;
@@ -610,6 +610,17 @@ span{
     .footer{
         padding: 2rem 3%;
     }
+    
+    .skill-main {
+       /* display: flex;
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        grid-template-columns: 1fr;
+    }
+    .skill-left, 
+    .skill-right {
+        width: 100%; /* Garante que ambas ocupem toda a largura */
+        margin-bottom: 2rem; /* Espaçamento entre as seções */
+    }
 }
 
 @media(max-width:895px){
@@ -677,4 +688,139 @@ span{
 
 .btn-toggle:hover {
     background-color: darken(var(--main-color), 10%);
+}
+
+
+.skills{
+    background-color: var(--second-bg-color);
+}
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
+}
+.skill-main p{
+    font-size: 2rem;
+}
+
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.skill-info{
+    display: flex;
+    padding-bottom: 3px;
+    justify-content: space-between;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 15px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: width 5s ease;
+    transition-delay: 0.5s;
+}
+.skill-bar .bar .html{
+    width: 50%;
+}
+.skill-bar .bar .python{
+    width: 60%;
+}
+.skill-bar .bar .java{
+    width: 40%;
+}
+.skill-bar .bar .c{
+    width: 70%;
+}
+.skill-bar .bar .sql{
+    width: 50%;
+}
+.skill-bar .bar .git{
+    width: 80%;
+}
+.skill-bar .bar .scrum{
+    width: 70%;
+}
+
+.professional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.box {
+    margin: 10px 0;
+    position: relative;
+    flex: 1 1 15rem;
+}
+.box .text-professional {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+.box .text-professional big {
+    font: 400;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 43.5%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+.box .text-professional small {
+    display: block;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.circle {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.circle .points {
+    width: 5px;
+    height: 10px;
+    background-color: var(--main-color);
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i) * var(--rot))) translateY(-45px);
+}
+.points.marked {
+    animation: glow 0.1s linear forwards;
+    animation-delay: calc(var(--i) * 0.05s);
+}
+@keyframes glow {
+    0% {
+        background-color: var(--bg-color);
+        box-shadow: none;
+    }
+    100% {
+        background: var(--main-color);
+        box-shadow: 0 0 25px var(--main-color);
+    }
 }
