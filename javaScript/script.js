@@ -56,9 +56,66 @@ document.querySelectorAll('.circle').forEach(circle => {
         circle.appendChild(point);
     }
 
-    // Marcar os pontos conforme a porcentagem
+    // Marca os pontos conforme a porcentagem
     const points = circle.querySelectorAll('.points');
     for (let i = 0; i < percent/*markedPoints*/; i++) {
         points[i].classList.add('marked');
     }
+});
+
+// ------------- Back to top -------------
+
+window.addEventListener('scroll', function() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = 'block'; // Mostra o botão
+    } else {
+        backToTopButton.style.display = 'none'; // Esconde o botão
+    }
+});
+
+
+document.getElementById('backToTop').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// ------------- Slider -------------
+
+document.addEventListener('DOMContentLoaded', function () {
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const slides = document.querySelectorAll('.swiper-slide');
+    let currentSlide = 0;
+
+    // Function to hide all slides
+    function hideAllSlides() {
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+    }
+
+    // Function to show the current slide
+    function showSlide(index) {
+        hideAllSlides();
+        slides[index].style.display = 'block';
+    }
+
+    // Show the first slide initially
+    showSlide(currentSlide);
+
+    // Event listener for previous button
+    prevBtn.addEventListener('click', function () {
+        currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+        showSlide(currentSlide);
+    });
+
+    // Event listener for next button
+    nextBtn.addEventListener('click', function () {
+        currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+        showSlide(currentSlide);
+    });
 });
