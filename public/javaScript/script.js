@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextBtn = document.querySelector('.next-btn');
     const slides = document.querySelectorAll('.swiper-slide');
     let currentSlide = 0;
+    const intervalTime = 5000; // Tempo entre transições automáticas (em milissegundos)
+    let interval;
 
     // Function to hide all slides
     function hideAllSlides() {
@@ -107,15 +109,64 @@ document.addEventListener('DOMContentLoaded', function () {
     // Show the first slide initially
     showSlide(currentSlide);
 
+    // Function to go to the next slide
+    function nextSlide() {
+        currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+        showSlide(currentSlide);
+    }
+
     // Event listener for previous button
     prevBtn.addEventListener('click', function () {
         currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
         showSlide(currentSlide);
+        resetInterval(); // Reinicia o intervalo ao mudar o slide manualmente
     });
 
     // Event listener for next button
     nextBtn.addEventListener('click', function () {
-        currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
-        showSlide(currentSlide);
+        nextSlide();
+        resetInterval(); // Reinicia o intervalo ao mudar o slide manualmente
     });
+
+    // Function to reset the automatic slide interval
+    function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(nextSlide, intervalTime);
+    }
+
+    // Start the automatic slide interval
+    interval = setInterval(nextSlide, intervalTime);
 });
+
+// ------------- Send Contact -------------
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();  // Previne o envio tradicional do formulário
+
+    // Coleta os dados do formulário
+    const formData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+        phone: document.getElementById('phone').value
+    };
+
+    // Envia os dados usando fetch
+    fetch('http://127.0.0.1:3000/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('E-mail enviado com sucesso!');
+    })
+    .catch(error => {
+        console.error('Erro ao enviar o e-mail:', error);
+        alert('Erro ao enviar o e-mail.');
+    });    
+});
+

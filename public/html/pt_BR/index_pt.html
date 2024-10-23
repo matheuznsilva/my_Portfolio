@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Matheus N Silva</title>
 
-        <link rel="stylesheet" href="/style/style.css">
-        <link rel="stylesheet" href="/style/en_button.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/en_button.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
@@ -134,41 +134,77 @@
         <!-------------- Project Section -------------->
 
         <section class="projects" id="projects">
-            <h2 class="heading">Projetos</h2>
+            <h2 class="heading">Projects</h2>
             <div class="projects-container">
-                <div class="project-box">
-                    <div class="project-info">
-                        <h4>Software Engineer</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                            adipisicing elit. Voluptatum, laborum 
-                            eveniet? In quia natus quasi, voluptatibus 
-                            suscipit, explicabo necessitatibus fugit nulla 
-                            amet qui excepturi aliquam at architecto veniam 
-                            quo minima.</p>
+                <div class="slider-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slide do projeto -->
+                        <div class="project-box swiper-slide">
+                            <div class="project-info">
+                                <h4><span>01</span></h4>
+                                <h3>Web system Brasileirão</h3>
+                                <p>The objective of this work is to develop a statistical system for the Brazilian football championship for an important Brazilian media company (fictional).</p>
+                                <ul class="stack">
+                                    <li>HTML5 + CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>Flask</li>
+                                    <li>SQL</li>
+                                </ul>
+                                <hr class="separator">
+                                <div class="social">
+                                    <a href="https://github.com/matheuznsilva/BrasileiraoWebSystem" target="_blank" aria-label="GitHub">
+                                        <i class='bx bxl-github'></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="/images/work/thumb1.png" alt="Project 1">
+                        </div>
+        
+                        <!-- Slide do projeto -->
+                        <div class="project-box swiper-slide">
+                            <div class="project-info">
+                                <h4><span>02</span></h4>
+                                <h3>Fullstack Project</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
+                                <ul class="stack">
+                                    <li>Next.js</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>Node.js</li>
+                                </ul>
+                                <hr class="separator">
+                                <div class="social">
+                                    <a href="https://github.com/matheuznsilva" target="_blank" aria-label="GitHub">
+                                        <i class='bx bxl-github'></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="/images/work/thumb2.png" alt="Project 2">
+                        </div>
+        
+                        <!-- Slide do projeto -->
+                        <div class="project-box swiper-slide">
+                            <div class="project-info">
+                                <h4><span>03</span></h4>
+                                <h3>Frontend Project</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
+                                <ul class="stack">
+                                    <li>Next.js</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                                <hr class="separator">
+                                <div class="social">
+                                    <a href="https://github.com/matheuznsilva" target="_blank" aria-label="GitHub">
+                                        <i class='bx bxl-github'></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="/images/work/thumb3.png" alt="Project 3">
+                        </div>
                     </div>
-                </div>
-
-                <div class="project-box">
-                    <div class="project-info">
-                        <h4>Software Tester</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                            adipisicing elit. Voluptatum, laborum 
-                            eveniet? In quia natus quasi, voluptatibus 
-                            suscipit, explicabo necessitatibus fugit nulla 
-                            amet qui excepturi aliquam at architecto veniam 
-                            quo minima.</p>
-                    </div>
-                </div>
-
-                <div class="project-box">
-                    <div class="project-info">
-                        <h4>Web Developer</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                            adipisicing elit. Voluptatum, laborum 
-                            eveniet? In quia natus quasi, voluptatibus 
-                            suscipit, explicabo necessitatibus fugit nulla 
-                            amet qui excepturi aliquam at architecto veniam 
-                            quo minima.</p>
+                    <!-- Botões do Slider -->
+                    <div class="slider-btns">
+                        <button class="prev-btn" onclick="prevSlide()"><i class='bx bx-chevron-left'></i></button>
+                        <button class="next-btn" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
                     </div>
                 </div>
             </div>
@@ -216,7 +252,7 @@
                     <div class="skill-bar">
                         <div class="skill-info">
                             <p>HTML + CSS</p>
-                            <p>50%</p>
+                            <p>65%</p>
                         </div>
                         <div class="bar">
                             <span class="html"></span>
@@ -379,18 +415,18 @@
             <form action="/send-email" method="post">
                 <div class="input-group">
                     <div class="input-box">
-                        <input type="text" name="fullName" id="fullName" placeholder="Full Name" required>
+                        <input type="text" name="fullName" id="fullName" placeholder="Nome completo" required>
                         <input type="email" name="email" id="email" placeholder="Email" required>
                     </div>
                     <div class="input-box">
-                        <input type="tel" name="phone" id="phone" placeholder="Phone Number">
-                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                        <input type="tel" name="phone" id="phone" placeholder="Telefone">
+                        <input type="text" name="subject" id="subject" placeholder="Assunto">
                     </div>
                 </div>
                 
                 <div class="input-group-2">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send Message" class="btn">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+                    <input type="submit" value="Enviar mensagem" class="btn">
                 </div>
             </form>
         </section>
@@ -437,7 +473,7 @@
         </a>
 
         <script src="/javaScript/script.js"></script>
-        <script src="/javaScript/send_email.js"></script>
+        <!-- <script src="/javaScript/send_email.js"></script> -->
     </body>
 
 </html>
