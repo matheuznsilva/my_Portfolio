@@ -74,4 +74,4 @@ def page_not_found(error):
     return send_from_directory(os.path.join(os.getcwd(), 'public', 'templates'), '404_page.html'), 404
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
