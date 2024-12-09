@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ------------- Send Contact -------------
 
-document.getElementById('contact-form').addEventListener('submit', function(e) {
+/* document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();  // Previne o envio tradicional do formulário
 
     // Coleta os dados do formulário
@@ -168,5 +168,37 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         console.error('Erro ao enviar o e-mail:', error);
         alert('Erro ao enviar o e-mail.');
     });    
+}); */
+
+const form = document.getElementById('contact-form').addEventListener('submit', async (e) => {e.preventDefault();
+
+    // Coleta os dados do formulário
+    const formData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+        phone: document.getElementById('phone').value
+    };
+
+    try {
+        const response = await fetch('/send-email', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        if(response.ok){
+            alert(result.message);
+        }else {
+            alert("Erro: ${result.error}");
+        }
+    } catch (error){
+        console.error('Erro ao enviar o formulario: ', error);
+        alert('Ocorreu um erro ao enviar sua mensagem. Tente novamente.');
+    }
 });
 
