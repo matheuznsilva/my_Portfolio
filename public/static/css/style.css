@@ -354,31 +354,39 @@ span{
 
 .project-box {
     display: flex; /* Organiza o conteúdo dentro da caixa de projeto em linha */
-    justify-content: space-between; /* Distribui o espaço igualmente entre os elementos dentro da caixa */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around; /* Distribui o espaço igualmente entre os elementos dentro da caixa */
     align-items: center; /* Centraliza verticalmente os itens dentro da caixa */
     width: 100%; /* Define a largura da caixa de projeto como 100% */
-    max-width: 1500px; /* Define a largura máxima da caixa como 1500px */
-    height: 700px; /* Define a altura da caixa de projeto como 700px */
-    margin: 0 1rem; /* Adiciona uma margem de 1rem nas laterais */
+    min-height: 700px;
     padding: 3rem; /* Adiciona um espaçamento interno de 3rem em todos os lados */
-    /* flex-wrap: nowrap; */ /* Certifica-se de que os itens dentro da caixa não quebrem linha */
+    gap: 3rem;
+}
+
+.project-image {
+    flex-basis: 50%;
+    max-width: 50%; /* Define a largura máxima da imagem como 50% do contêiner pai */
+    display: flex; /* Organiza o conteúdo da imagem em flexbox */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo da imagem */
+    align-items: center;
 }
 .project-image img {
-    max-width: 50%; /* Define que a imagem pode ocupar no máximo 50% da largura do contêiner pai */
-    height: auto;
-    object-fit: cover; /* Para ajustar a imagem dentro do espaço */
+    width: 100%; /* Define que a imagem ocupará 100% da largura do contêiner pai */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    object-fit: contain; /* Para ajustar a imagem dentro do espaço */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* ! Até aqui*/
 
 .project-info {
-    flex: 1; /* Faz com que o contêiner de informações ocupe o espaço disponível */
+    flex-basis: 50%;
     display: flex; /* Organiza o conteúdo da informação em flexbox */
     flex-direction: column; /* Organiza os elementos em uma coluna */
-    justify-content: flex-start; /* Alinha o conteúdo ao início verticalmente */
+    justify-content: center; /* Alinha o conteúdo ao início verticalmente */
     align-items: flex-start; /* Alinha os elementos à esquerda horizontalmente */
-    padding: 5rem; /* Adiciona um espaçamento interno de 5rem */
-    padding-right: 2rem; /* Adiciona um espaçamento de 2rem à direita */
+    padding: 0;
     max-width: 50%; /* Define a largura máxima das informações como 50% do contêiner pai */
     color: white; /* Define a cor do texto como branca */
 }
@@ -386,7 +394,8 @@ span{
 .project-info h4 {
     font-size: 10rem; /* Define o tamanho da fonte como 10rem */
     font-weight: 800; /* Define a espessura da fonte como muito forte */
-    line-height: 2; /* Define o espaçamento entre linhas como o dobro da altura da linha padrão */
+    line-height: 1; /* Define o espaçamento entre linhas como o dobro da altura da linha padrão */
+    margin-bottom: 2rem;
 }
 
 .project-info h3 {
@@ -445,8 +454,9 @@ span{
 
 .projects .social{
     text-align: center; /* Centraliza o conteúdo da seção social */
-    padding-bottom: 25px; /* Adiciona espaçamento abaixo do conteúdo */
+    padding-bottom: 0; /* Adiciona espaçamento abaixo do conteúdo */
     color: var(--main-color); /* Define a cor do texto como a cor principal */
+    margin-top: 1rem; /* Espaçamento acima dos ícones sociais */
 }
 
 .projects .social a{
@@ -466,7 +476,7 @@ span{
 
 .projects .social a:hover{
     color: black; /* Altera a cor do texto para preto no hover */
-    transform: scale(1.3) translateY(-5px); /* Aumenta o tamanho e move o link para cima no hover */
+    transform: scale(1.1) translateY(-3px); /* Aumenta o tamanho e move o link para cima no hover */
     box-shadow: 0 0 25px var(--main-color); /* Adiciona sombra no hover */
     background-color: var(--main-color); /* Altera a cor de fundo para a cor principal no hover */
 }
@@ -475,7 +485,7 @@ span{
     border: none; /* Remove a borda padrão */
     height: 1px; /* Define a altura da linha separadora */
     background-color: white; /* Define a cor da linha como branca */
-    margin: 1rem 0; /* Adiciona espaçamento acima e abaixo da linha */
+    margin: 1.5rem 0; /* Adiciona espaçamento acima e abaixo da linha */
     width: 100%; /* Define a largura da linha como 100% */
 }
 
@@ -918,6 +928,34 @@ span{
         padding-bottom: 7rem;
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .project-box {
+        flex-direction: column; /* Em telas menores, a imagem e o texto ficam em coluna */
+        text-align: center;
+        gap: 2rem; /* Ajuste o espaçamento entre a imagem e o texto */
+    }
+
+    .project-info {
+        max-width: 100%; /* Ocupa toda a largura */
+        padding-right: 0; /* Remove padding extra */
+        align-items: center; /* Centraliza o conteúdo da informação em modo coluna */
+    }
+
+    .project-image {
+        max-width: 80%; /* Ajusta a largura da imagem em modo coluna */
+    }
+
+    .project-info h4 {
+        margin-bottom: 1rem;
+    }
+
+    .project-info p,
+    .stack,
+    .projects .social {
+        text-align: center; /* Centraliza o texto e ícones em modo coluna */
     }
 }
 
