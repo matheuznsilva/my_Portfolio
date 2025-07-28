@@ -21,12 +21,10 @@ O site suporta **idiomas inglês e português (Brasil)**, com opções de troca 
 A estrutura de pastas do projeto foi organizada para facilitar a manutenção e escalabilidade:
 ```
 .
-├── src/                          # Contém o código-fonte da aplicação Python 
-│   │                               (Flask)
+├── src/                          # Contém o código-fonte da aplicação Python (Flask)
 │   ├── app.py                    # Aplicação Flask principal
 │   └── config.py                 # Configurações da aplicação
-├── public/                       # Contém todos os arquivos estáticos e templates 
-│   │                               do frontend
+├── public/                       # Contém todos os arquivos estáticos e templates do frontend
 │   ├── static/                   # Assets estáticos (CSS, JS, Imagens)
 │   │   ├── css/                  # Folhas de estilo CSS
 │   │   │   └── style.css
@@ -43,8 +41,7 @@ A estrutura de pastas do projeto foi organizada para facilitar a manutenção e 
 ├── Dockerfile                    # Configuração para criar a imagem Docker
 ├── README.md                     # Este arquivo de documentação
 ├── requirements.txt              # Dependências Python do projeto
-└── .env                          # Arquivo para variáveis de ambiente 
-                                    (NÃO commitar no Git!)
+└── .env                          # Arquivo para variáveis de ambiente (NÃO commitar no Git!)
 
 ```
 ## Configuração e Execução (Localmente)
