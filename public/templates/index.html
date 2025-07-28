@@ -7,7 +7,6 @@
 	<title>Matheus N Silva</title>
 
 	<link rel="stylesheet" href="/static/css/style.css">
-	<link rel="stylesheet" href="/static/css/pt_button.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -29,7 +28,7 @@
 		</nav>
 
 		<div class="lang-btn">
-			<a href="/pt_BR" class="select-lang"></a>
+			<a href="/pt_BR" class="select-lang us"></a>
 		</div>
 
 	</header>
@@ -60,9 +59,8 @@
 			</div>
 		</div>
 
-
 		<div class="home-img">
-			<img src="/images/profile.JPEG">
+			<img src="/static/images/profile.JPEG">
 		</div>
 	</section>
 
@@ -137,88 +135,30 @@
 	<!-------------- Project Section -------------->
 
 	<section class="projects" id="projects">
-		<h2 class="heading">Projects</h2>
-		<div class="projects-container">
-			<div class="swiper-wrapper">
-				<!-- Slide do projeto -->
-				<div class="project-box swiper-slide">
-					<div class="project-info">
-						<h4><span>01</span></h4>
-						<h3>Web system Brasileirão</h3>
-						<p>The objective of this work is to develop a statistical system for the Brazilian football championship for
-							an important Brazilian media company (fictional).</p>
-						<ul class="stack">
-							<li>HTML5 + CSS3</li>
-							<li>JavaScript</li>
-							<li>Flask</li>
-							<li>SQL</li>
-						</ul>
-						<hr class="separator">
-						<div class="social">
-							<a href="https://github.com/matheuznsilva/BrasileiraoWebSystem" target="_blank" aria-label="GitHub">
-								<i class='bx bxl-github'></i>
-							</a>
-						</div>
-					</div>
-					<div class="project-image">
-						<img src="/images/work/thumb1.png" alt="Project 1">
-					</div>
-				</div>
-
-				<!-- Slide do projeto -->
-				<div class="project-box swiper-slide">
-					<div class="project-info">
-						<h4><span>02</span></h4>
-						<h3>Fullstack Project</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
-						<ul class="stack">
-							<li>Next.js</li>
-							<li>Tailwind CSS</li>
-							<li>Node.js</li>
-						</ul>
-						<hr class="separator">
-						<div class="social">
-							<a href="https://github.com/matheuznsilva" target="_blank" aria-label="GitHub">
-								<i class='bx bxl-github'></i>
-							</a>
-						</div>
-					</div>
-					<div class="project-image">
-						<img src="/images/work/thumb2.png" alt="Project 2">
-					</div>
-				</div>
-
-				<!-- Slide do projeto -->
-				<div class="project-box swiper-slide">
-					<div class="project-info">
-						<h4><span>03</span></h4>
-						<h3>Frontend Project</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
-						<ul class="stack">
-							<li>Next.js</li>
-							<li>Tailwind CSS</li>
-						</ul>
-						<hr class="separator">
-						<div class="social">
-							<a href="https://github.com/matheuznsilva" target="_blank" aria-label="GitHub">
-								<i class='bx bxl-github'></i>
-							</a>
-						</div>
-					</div>
-					<div class="project-image">
-						<img src="/images/work/thumb3.png" alt="Project 3">
-					</div>
-				</div>
-			</div>
-
-			<!-- Botões do Slider -->
-			<div class="slider-btns">
-				<button class="prev-btn" onclick="prevSlide()"><i class='bx bx-chevron-left'></i></button>
-				<button class="next-btn" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
-			</div>
-		</div>
-	</section>
-
+    <h2 class="heading">Projects</h2>
+    <div class="projects-container">
+        <div class="carousel-content">
+            <div class="project-details">
+                <div class="project-number" id="projectNumber">01</div>
+                <h3 class="project-title" id="projectTitle">Web system Brasileirão</h3> <p class="project-description" id="projectDescription">
+                    The objective of this work is to develop a statistical system for the Brazilian football championship for an important Brazilian media company (fictional).
+                </p>
+                <div class="project-technologies" id="projectTechnologies">Html 5, Css 3, Javascript, Flask, SQL</div>
+                <div class="project-links">
+                    <a href="#" class="link-button github-link" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="link-button live-link" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="project-image-container">
+                <img src="/static/images/work/thumb1.png" alt="Project 1" class="project-image" id="projectImage">
+            </div>
+        </div>
+        <div class="carousel-navigation">
+            <button class="nav-button prev-button" id="prevButton"><i class='bx bx-chevron-left'></i></button>
+            <button class="nav-button next-button" id="nextButton"><i class='bx bx-chevron-right'></i></button>
+        </div>
+    </div>
+</section>
 
 	<!-------------- Skills Section -------------->
 
@@ -365,7 +305,7 @@
 			<div class="wrapper">
 
 				<div class="testimonials-item">
-					<img src="/images/icon.jpg" alt="">
+					<img src="/static/images/icon.jpg" alt="">
 					<h2>Tilias</h2>
 					<div class="rating">
 						<i class='bx bxs-star' id="star"></i>
@@ -382,7 +322,7 @@
 				</div>
 
 				<div class="testimonials-item">
-					<img src="/images/icon.jpg" alt="">
+					<img src="/static/images/icon.jpg" alt="">
 					<h2>Felipão</h2>
 					<div class="rating">
 						<i class='bx bxs-star' id="star"></i>
@@ -399,7 +339,7 @@
 				</div>
 
 				<div class="testimonials-item">
-					<img src="/images/icon.jpg" alt="">
+					<img src="/static/images/icon.jpg" alt="">
 					<h2>Dougbar</h2>
 					<div class="rating">
 						<i class='bx bxs-star' id="star"></i>
@@ -484,7 +424,7 @@
 		<i class='bx bx-up-arrow-alt'></i>
 	</a>
 
-	<script src="static/javaScript/script.js"></script>
+	<script src="/static/js/script.js"></script>
 </body>
 
 </html>

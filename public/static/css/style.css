@@ -82,6 +82,29 @@ body{
     display: none;
 }
 
+/* --- Estilos para os Botões de Idioma --- */
+.lang-btn {
+    margin-top: 0;
+}
+
+.select-lang {
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.select-lang.br {
+    background-image: url(https://flagsapi.com/BR/shiny/32.png); /* URL da bandeira */
+}
+.select-lang.us {
+    background-image: url(https://flagsapi.com/US/shiny/32.png); /* URL da bandeira */
+}
+
+/* --- Section Styles --- */
 section{
     min-height: 100vh;
     padding: 10rem 12% 10rem;
@@ -324,171 +347,173 @@ span{
 /*------------- Project Styles ------------- */
 
 .projects {
-    background: var(--bg-color); /* Define o fundo da seção com uma cor variável */
-    color: black; /* Define a cor do texto como preta */
-    padding: 10rem 0; /* Adiciona um espaçamento de 10rem acima e abaixo da seção */
-    text-align: center; /* Centraliza o texto dentro da seção */
+    background: var(--bg-color);
+    color: var(--text-color); /* Corrigido para a variável de texto */
+    padding: 10rem 0;
+    text-align: center;
 }
 
-.projects h2 {
-    margin-bottom: 5rem; /* Adiciona um espaçamento de 5rem abaixo do título (h2) */
-    color: white; /* Define a cor do título como branco */
+.projects h2.heading {
+    margin-bottom: 5rem;
+    color: var(--text-color);
 }
-
-/* ! A modificação tem que ser aqui*/
 
 .projects-container {
-    position: relative; /* Define a posição como relativa para controlar melhor elementos filhos */
-    max-width: 1400px; /* Define a largura máxima do contêiner como 1400px */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    padding: 0 2rem; /* Adiciona 2rem de espaçamento nas laterais internas do contêiner */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites do contêiner */
-    background-color: var(--second-bg-color); /* Define a cor de fundo com uma cor variável */
-}
-
-.swiper-wrapper {
-    display: flex; /* Coloca os elementos filhos em uma única linha (horizontal) */
-    transition: transform 0.4s ease-in-out; /* Aplica uma transição suave para transformações (ex. deslizamento) */
-    width: 100%; /* Define a largura como 100% do contêiner pai */
-}
-
-.project-box {
-    display: flex; /* Organiza o conteúdo dentro da caixa de projeto em linha */
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around; /* Distribui o espaço igualmente entre os elementos dentro da caixa */
-    align-items: center; /* Centraliza verticalmente os itens dentro da caixa */
-    width: 100%; /* Define a largura da caixa de projeto como 100% */
-    min-height: 700px;
-    padding: 3rem; /* Adiciona um espaçamento interno de 3rem em todos os lados */
-    gap: 3rem;
-}
-
-.project-image {
-    flex-basis: 50%;
-    max-width: 50%; /* Define a largura máxima da imagem como 50% do contêiner pai */
-    display: flex; /* Organiza o conteúdo da imagem em flexbox */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo da imagem */
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 60px;
+    overflow: hidden;
+    background-color: var(--second-bg-color);
+    min-height: 800px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative; /* Essencial para os botões de navegação absolutos */
 }
-.project-image img {
-    width: 100%; /* Define que a imagem ocupará 100% da largura do contêiner pai */
-    height: auto; /* Mantém a proporção da altura da imagem */
-    object-fit: contain; /* Para ajustar a imagem dentro do espaço */
+
+.carousel-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+}
+
+.project-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.project-number {
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--main-color); /* Usando main-color como no seu CSS original */
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.project-number::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 60%;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.project-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.project-description {
+    font-size: 1.9rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.project-technologies {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 3rem;
+}
+
+.link-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    font-size: 3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: var(--second-bg-color); /* Alterado para second-bg-color para combinar com o design */
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.project-image-container {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-bg-color);
+    overflow: hidden;
+    padding: 25px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-/* ! Até aqui*/
-
-.project-info {
-    flex-basis: 50%;
-    display: flex; /* Organiza o conteúdo da informação em flexbox */
-    flex-direction: column; /* Organiza os elementos em uma coluna */
-    justify-content: center; /* Alinha o conteúdo ao início verticalmente */
-    align-items: flex-start; /* Alinha os elementos à esquerda horizontalmente */
-    padding: 0;
-    max-width: 50%; /* Define a largura máxima das informações como 50% do contêiner pai */
-    color: white; /* Define a cor do texto como branca */
+.project-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-.project-info h4 {
-    font-size: 10rem; /* Define o tamanho da fonte como 10rem */
-    font-weight: 800; /* Define a espessura da fonte como muito forte */
-    line-height: 1; /* Define o espaçamento entre linhas como o dobro da altura da linha padrão */
-    margin-bottom: 2rem;
+/* --- ESTILOS DOS BOTÕES DO CARROSSEL --- */
+.carousel-navigation {
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
 }
 
-.project-info h3 {
-    font-size: 4rem; /* Define o tamanho da fonte como 4rem */
-    margin-bottom: 1rem; /* Adiciona um espaçamento de 1rem abaixo do título */
+.nav-button {
+    background-color: var(--main-color);
+    border: none;
+    color: white; /* CORRIGIDO: Cor do ícone para contrastar com o main-color */
+    width: 65px; /* Aumentado para melhor visualização */
+    height: 65px; /* Aumentado para melhor visualização */
+    font-size: 4rem; /* Ajuste para o tamanho do ícone */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
-.project-info p {
-    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8rem */
-    font-weight: 600; /* Define a espessura da fonte como média */
-    line-height: 1.7; /* Define o espaçamento entre linhas */
-    text-align: left; /* Alinha o texto à esquerda */
+.nav-button:hover {
+    background-color: var(--text-color); /* Mudança de cor no hover, ex: branco */
+    color: var(--main-color); /* Cor do ícone no hover */
+    transform: translateY(-3px);
 }
 
-.stack {
-    list-style: none; /* Remove os marcadores de lista */
-    padding: 0; /* Remove o preenchimento interno da lista */
-    margin-top: 1rem; /* Adiciona um espaçamento acima da lista */
+.nav-button:active {
+    transform: translateY(0);
 }
-
-.stack li {
-    font-size: 1.6rem; /* Define o tamanho da fonte dos itens da lista como 1.6rem */
-    margin: 0.5rem 0; /* Adiciona espaçamento de 0.5rem acima e abaixo de cada item */
-    text-align: left; /* Alinha o texto à esquerda */
-}
-
-.slider-btns {
-    position: absolute; /* Define a posição dos botões como absoluta */
-    bottom: 20px; /* Posiciona os botões a 20px do fundo */
-    right: 20px; /* Posiciona os botões a 20px da direita */
-    display: flex; /* Exibe os botões em linha */
-    gap: 10px; /* Adiciona um espaçamento de 10px entre os botões */
-    z-index: 10; /* Garante que os botões fiquem acima de outros elementos */
-}
-
-.slider-btns button {
-    background: var(--main-color); /* Define a cor de fundo do botão */
-    padding: .5rem 1rem; /* Adiciona um espaçamento interno */
-    color: white; /* Define a cor do texto como branca */
-    font-size: 4rem; /* Define o tamanho da fonte dos botões */
-    cursor: pointer; /* Altera o cursor para "pointer" quando o botão for clicável */
-    transition: 0.3s; /* Aplica uma transição suave de 0.3s */
-    display: flex; /* Exibe o conteúdo do botão em flexbox */
-    align-items: center; /* Centraliza verticalmente o conteúdo do botão */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo do botão */
-}
-
-.slider-btns button:hover {
-    background: white; /* Altera a cor de fundo para branco ao passar o mouse */
-    color: var(--main-color); /* Altera a cor do texto para a cor principal ao passar o mouse */
-}
-
-.prev-btn, .next-btn {
-    z-index: 2; /* Garante que os botões de navegação fiquem acima de outros elementos */
-}
-
-.projects .social{
-    text-align: center; /* Centraliza o conteúdo da seção social */
-    padding-bottom: 0; /* Adiciona espaçamento abaixo do conteúdo */
-    color: var(--main-color); /* Define a cor do texto como a cor principal */
-    margin-top: 1rem; /* Espaçamento acima dos ícones sociais */
-}
-
-.projects .social a{
-    display: inline-block; /* Exibe os links de redes sociais como blocos em linha */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    width: 5rem; /* Define a largura dos links sociais */
-    height: 5rem; /* Define a altura dos links sociais */
-    border: 2px solid var(--main-color); /* Adiciona uma borda de 2px da cor principal */
-    font-size: 3rem; /* Define o tamanho da fonte como 3rem */
-    border-radius: 50%; /* Deixa os links com formato circular */
-    color: var(--main-color); /* Define a cor do texto como a cor principal */
-    line-height: 5.3rem; /* Define o espaçamento vertical do texto */
-    margin: 1rem 0rem; /* Adiciona espaçamento acima e abaixo dos links */
-    transition: 0.3s ease-in-out; /* Aplica uma transição suave ao hover */
-}
-
-.projects .social a:hover{
-    color: black; /* Altera a cor do texto para preto no hover */
-    transform: scale(1.1) translateY(-3px); /* Aumenta o tamanho e move o link para cima no hover */
-    box-shadow: 0 0 25px var(--main-color); /* Adiciona sombra no hover */
-    background-color: var(--main-color); /* Altera a cor de fundo para a cor principal no hover */
-}
-
-.separator {
-    border: none; /* Remove a borda padrão */
-    height: 1px; /* Define a altura da linha separadora */
-    background-color: white; /* Define a cor da linha como branca */
-    margin: 1.5rem 0; /* Adiciona espaçamento acima e abaixo da linha */
-    width: 100%; /* Define a largura da linha como 100% */
-}
-
 
 /*------------- Skills Styles ------------- */
 
