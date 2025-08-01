@@ -2,20 +2,20 @@
 const projects = [
     {
         number: '01',
-        type: 'Web system Brasileirão',
-        description: 'The objective of this work is to develop a statistical system for the Brazilian football championship for an important Brazilian media company (fictional).',
-        technologies: 'Html 5, Css 3, Javascript, Flask, SQL',
-        image: '/static/images/work/thumb1.png', // Caminho relativo ajustado para o Flask
-        githubLink: 'https://github.com/matheuznsilva/BrasileiraoWebSystem',
-        liveLink: '#'
+        type: 'Website Radio Cidade',
+        description: 'O site da Rádio Cidade Web foi desenvolvido utilizando HTML, CSS e JavaScript para atender a uma necessidade de projeto rápido, objetivo e com poucos recursos, conforme solicitado pelo cliente. A escolha dessas tecnologias visou a rapidez na implementação e a simplicidade da estrutura, garantindo uma presença online funcional e eficiente para a rádio em um curto espaço de tempo',
+        technologies: 'Html, CSS, Javascript',
+        image: '/static/images/work/SiteCidadeWeb.png', // Caminho relativo ajustado para o Flask
+        githubLink: 'https://github.com/matheuznsilva/Website-Radio-Cidade',
+        liveLink: 'https://radiocidadeweb.com.br'
     },
     {
         number: '02',
-        type: 'Fullstack Project',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.',
-        technologies: 'Next.js, Tailwind CSS, Node.js',
+        type: 'Web system Brasileirão',
+        description: 'The objective of this work is to develop a statistical system for the Brazilian football championship for an important Brazilian media company (fictional).',
+        technologies: 'Html 5, Css 3, Javascript, Flask, SQL',
         image: '/static/images/work/thumb2.png', // Caminho relativo ajustado para o Flask
-        githubLink: 'https://github.com/matheuznsilva',
+        githubLink: 'https://github.com/matheuznsilva/BrasileiraoWebSystem',
         liveLink: '#'
     },
     {

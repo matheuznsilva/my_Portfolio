@@ -40,8 +40,7 @@ A estrutura de pastas do projeto foi organizada para facilitar a manutenção e 
 │           └── index_pt.html     # Página principal em português
 ├── Dockerfile                    # Configuração para criar a imagem Docker
 ├── README.md                     # Este arquivo de documentação
-├── requirements.txt              # Dependências Python do projeto
-└── .env                          # Arquivo para variáveis de ambiente (NÃO commitar no Git!)
+└── requirements.txt              # Dependências Python do projeto
 
 ```
 ## Configuração e Execução (Localmente)
